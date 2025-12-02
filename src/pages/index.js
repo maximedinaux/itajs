@@ -17,7 +17,7 @@ const Index = () => {
     <div>
       <h1>Home</h1>
       <h2>
-        Test <strong>v39</strong> request
+        Test <strong>v40</strong> request
       </h2>
       <ul>
         {data.a.nodes.map((item, index) => {
