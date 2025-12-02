@@ -16,7 +16,9 @@ const Index = () => {
   return (
     <div>
       <h1>Home</h1>
-      <h2>Test request</h2>
+      <h2>
+        Test <strong>v1</strong> request
+      </h2>
       <ul>
         {data.a.nodes.map((item, index) => {
           return <li kye={index}>{item.title}</li>
