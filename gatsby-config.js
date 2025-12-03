@@ -13,5 +13,6 @@ module.exports = {
         url: `https://itawp.oueb.be/graphql`,
       },
     },
+    `gatsby-plugin-sass`,
   ],
 }

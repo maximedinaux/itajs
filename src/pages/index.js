@@ -1,11 +1,14 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-
+//component
+import Layout from '../components/Layout'
+//data
 const getData = graphql`
   {
-    a: allWpPage {
+    a: allWpPage(sort: { menuOrder: ASC }) {
       nodes {
         title
+        slug
       }
     }
   }
@@ -14,7 +17,7 @@ const getData = graphql`
 const Index = () => {
   const data = useStaticQuery(getData)
   return (
-    <div>
+    <Layout>
       <h1>Home</h1>
       <h2>Liste des pages du site</h2>
       <h3>async compilation en live</h3>
@@ -23,7 +26,7 @@ const Index = () => {
           return <li kye={index}>{item.title}</li>
         })}
       </ul>
-    </div>
+    </Layout>
   )
 }
 
